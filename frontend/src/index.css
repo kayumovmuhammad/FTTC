@@ -1,0 +1,43 @@
+.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl {
+  background-color: #fafafb;
+}
+
+* {
+  transition: 0.2s;
+}
+
+@keyframes spin-slow {
+  /* from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  } */
+}
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.like_icon {
+  position: absolute;
+  bottom: 50px;
+  right: 5px;
+}
