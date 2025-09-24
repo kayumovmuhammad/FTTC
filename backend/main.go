@@ -36,5 +36,5 @@ func main() {
 	r.POST("/user/view-category", user.View_category_handler)
 	r.POST("/user/create-orders", user.Create_more_orders_handler)
 
-	r.Logger.Fatal(r.Start("172.31.11.198:8080"))
+	r.Logger.Fatal(r.Start("172.20.10.3:8080"))
 }

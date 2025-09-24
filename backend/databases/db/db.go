@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"log"
-	"os"
 
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/joho/godotenv"
@@ -17,12 +16,7 @@ func Connect_to_db() (*pgxpool.Pool, error) {
 	}
 
 	connectStr := fmt.Sprintf(
-		"postgres://%s:%s@localhost:%s/%s?sslmode=%s",
-		os.Getenv("USER"),
-		os.Getenv("PASSWORD"),
-		os.Getenv("PORT"),
-		os.Getenv("DB_NAME"),
-		os.Getenv("SSLMODE"),
+		"postgresql://technical_store_g444_user:RuJPKNYt98IFIC8L717Zzk6bzgh5hUkl@dpg-d2njhmh5pdvs73bajs50-a.oregon-postgres.render.com/technical_store_g444",
 	)
 
 	pool, err := pgxpool.New(context.Background(), connectStr)
